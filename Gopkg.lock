@@ -2,7 +2,7 @@
 
 
 [[projects]]
-  digest = "1:6963ef0d9e96208a67bfff8a7f4cef17f04f85263d82811befb1c8fc88f3f26b"
+  digest = "1:a8e647a839aeb1cbf3c8b4d57f32f8ad72ecea80d83beeee40fec0e9d5ae55b4"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -15,6 +15,7 @@
     "aws/credentials/ec2rolecreds",
     "aws/credentials/endpointcreds",
     "aws/credentials/processcreds",
+    "aws/credentials/ssocreds",
     "aws/credentials/stscreds",
     "aws/csm",
     "aws/defaults",
@@ -38,14 +39,17 @@
     "private/protocol/query",
     "private/protocol/query/queryutil",
     "private/protocol/rest",
+    "private/protocol/restjson",
     "private/protocol/xml/xmlutil",
     "service/ssm",
+    "service/sso",
+    "service/sso/ssoiface",
     "service/sts",
     "service/sts/stsiface",
   ]
   pruneopts = "UT"
-  revision = "81abf80dec07700b14a91ece14b8eca6c5e6b4f8"
-  version = "v1.29.17"
+  revision = "a4682d4210120fddcd2172057123998b2ca6fa02"
+  version = "v1.41.1"
 
 [[projects]]
   digest = "1:bb81097a5b62634f3e9fec1014657855610c82d19b9a40c17612e32651e35dca"
@@ -55,12 +59,12 @@
   revision = "c2b33e84"
 
 [[projects]]
-  digest = "1:ecd9aa82687cf31d1585d4ac61d0ba180e42e8a6182b85bd785fcca8dfeefc1b"
+  digest = "1:1dfc127435ea672e2d0b9ccf48379a294ee47dd6e725403252d5e16c7ef0010c"
   name = "github.com/joho/godotenv"
   packages = ["."]
   pruneopts = "UT"
-  revision = "23d116af351c84513e1946b527c88823e476be13"
-  version = "v1.3.0"
+  revision = "ddf83eb33bbb136f62617a409142b74b91dbcff3"
+  version = "v1.4.0"
 
 [solve-meta]
   analyzer-name = "dep"
