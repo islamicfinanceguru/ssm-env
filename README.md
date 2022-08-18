@@ -16,7 +16,7 @@ assuming the value of `/com/team/svc` in AWS Parameter Store is `foo`.
 
 ## Installation
 
-Download a binary from the [releases page](https://github.com/moovel/ssm-env/releases).
+Download a binary from the [releases page](https://github.com/islamicfinanceguru/ssm-env/releases).
 
 ## Usage
 ```
