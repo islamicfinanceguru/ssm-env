@@ -18,6 +18,7 @@ assuming the value of `/com/team/svc` in AWS Parameter Store is `foo`.
 
 Download a binary from the [releases page](https://github.com/islamicfinanceguru/ssm-env/releases).
 
+Once downloaded, copy the binary to `/.usr/local/bin` and restart your terminal.
 ## Usage
 ```
 ssm-env
