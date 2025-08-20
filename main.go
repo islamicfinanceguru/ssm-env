@@ -43,6 +43,12 @@ func substituteSsmParams(ssmSvc *ssm.SSM, env map[string]string) map[string]stri
 	return substEnv
 }
 
+func singleQuote(s string) string {
+	// Close ', emit '\'' (literal single quote), reopen '
+  // This yields POSIX-safe single-quoted literal.
+  return "'" + strings.ReplaceAll(s, "'", `'\''`) + "'"
+}
+
 func main() {
 	var region string
 	var srcPath string
@@ -72,6 +78,9 @@ func main() {
 	}
 
 	substEnv := substituteSsmParams(ssmSvc, env)
-	content, _ := godotenv.Marshal(substEnv)
-	fmt.Printf("%v\n", content)
+	var b strings.Builder
+	for k, v := range substEnv {
+		fmt.Fprintf(&b, "%s=%s\n", k, singleQuote(v))
+	}
+	fmt.Print(b.String())
 }
